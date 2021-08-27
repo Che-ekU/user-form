@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container-fluid pb-3 pt-3" id='formHolder'>
+        <div class="bg-dec d-flex flex-column text-primary m-auto w-md-75 p-5">
+            <h1 class="form-heading">Add User</h1>
+            <form id="myForm">
+                <div class="mb-3">
+                    <label for="fName">First Name</label>
+                    <input type="text" class="form-control" id="fName" />
+                    <p id="fNameErrMsg" class="error-message"></p>
+                </div>
+                <div class="mb-3">
+                    <label for="lName">Last Name</label>
+                    <input type="text" class="form-control" id="lName" />
+                    <p id="lNameErrMsg" class="error-message"></p>
+                </div>
+                <div class="mb-3">
+                    <label for="mName">Middle Name</label>
+                    <input type="text" class="form-control" id="mName" />
+                    <p id="mNameErrMsg" class="error-message"></p>
+                </div>
+                <div class="mb-3">
+                    <label for="street">Door no, street, city</label>
+                    <input type="text" class="form-control" id="street" />
+                    <p id="streetNameErrMsgEl" class="error-message"></p>
+                </div>
+                <div class="mb-3">
+                    <label for="state">State</label>
+                    <select id="state" class="form-control">
+                        <option value="California">California</option>
+                        <option value="Washington">Washington</option>
+                        <option value="Alaska">Alaska</option>
+                        <option value="New Jersey">New Jersey</option>
+                        <option value="New Mexico">New Mexico</option>
+                        <option value="New York">New York</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="zipCode">Zip Code</label>
+                    <input type="number" class="form-control" id="zipCode" />
+                    <p id="zipErrMsg" class="error-message"></p>
+                </div>
+                <div class="mb-3">
+                    <label for="status">Country</label>
+                    <select id="status" class="form-control">
+                        <option value="US">US</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" />
+                    <p id="emailErrMsg" class="error-message"></p>
+                </div>
+                <div class="mb-3">
+                    <label for="phone">Phone</label>
+                    <input type="tel" class="form-control" id="phone" maxlength="10" placeholder="1234567890" pattern="[0-9]{10}" />
+                    <p id="phoneErrMsg" class="error-message"></p>
+                </div>
+                <div class="mb-3 d-flex flex-column flex-md-row">
+                    <div class="mr-md-3">
+                        <label for="weight">Weight (in kgs)</label>
+                        <input type="number" class="form-control" id="weight" />
+                        <p id="weightErrMsg" class="error-message"></p>
+                    </div>
+                    <div class="d-flex flex-row">
+                        <div class="mr-3">
+                            <label for="height">Height</label>
+                            <input type="number" class="form-control" id="height" />
+                            <p id="heightErrMsg" class="error-message"></p>
+                        </div>
+                        <div>
+                            <label for="measure">Ft/Inch</label>
+                            <select id="measure" class="form-control">
+                                <option value="Ft">Ft</option>
+                                <option value="Inch">Inch</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-primary mb-5">Submit</button>
+            </form>
+        </div>
+        <div class="user-details-section d-none mt-5 ml-auto mr-auto mb-5 w-75 w-md-50 p-5" id="displayDetailsContainer">
+            <div class="m-auto align-items-center">
+                <h1 class="details-h mb-5" id="detailsH"></h1>
+                <p class="p-dec" id="nameDisplay"></p>
+                <p class="p-dec" id="adressDisplay"></p>
+                <p class="p-dec" id="emailDisplay"></p>
+                <p class="p-dec" id="phoneDisplay"></p>
+                <p class="p-dec" id="heightDisplay"></p>
+                <p class="p-dec" id="weightDisplay"></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
